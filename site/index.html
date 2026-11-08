@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="每日追踪 VLA、WAM、具身强化学习与 VTLA 的论文和技术动态。">
+  <title>Embodied Radar · 具身研究雷达</title>
+  <link rel="stylesheet" href="style.css"><script defer src="app.js"></script>
+</head>
+<body>
+<header><a class="brand" href="./">◉ EMBODIED RADAR</a><span>研究持续发生，线索汇集于此。</span></header>
+<main>
+  <section class="hero"><p class="eyebrow">DAILY RESEARCH OBSERVATORY</p>
+  <h1>追踪具身智能的<br><em>下一步。</em></h1>
+  <p class="intro">VLA、世界动作模型、具身强化学习与触觉策略的研究动态。保留原始来源，让每条线索都可追溯。</p>
+  <div class="stats"><div><strong id="total">—</strong><span>收录记录</span></div><div><strong id="today">—</strong><span>今日发现 · 北京时间</span></div><div><strong id="checked">—</strong><span>采集渠道成功</span></div></div>
+  </section>
+  <section class="controls" aria-label="筛选文章">
+    <label class="search">搜索标题、作者或摘要<input id="query" type="search" placeholder="试试 tactile、强化学习、作者姓名…"></label>
+    <div class="filters"><label>研究方向<select id="topic"><option value="">全部方向</option><option>VLA</option><option>WAM</option><option>具身RL</option><option>VTLA</option></select></label>
+    <label>来源类型<select id="kind"><option value="">全部类型</option><option>论文</option><option>企业</option><option>高校</option><option>待核验</option></select></label>
+    <label>发现时间<select id="period"><option value="">全部时间</option><option value="1">今天（北京时间）</option><option value="7">最近 7 天</option><option value="30">最近 30 天</option></select></label>
+    <label>排序<select id="sort"><option value="discovery">最近发现</option><option value="published">发表时间</option><option value="updated">来源更新时间</option></select></label></div>
+  </section>
+  <div class="section-title"><h2>研究动态</h2><span id="count" aria-live="polite">正在加载…</span></div>
+  <div id="list" aria-live="polite"></div><button id="more" hidden>再看 40 篇</button>
+  <details class="status" open><summary>采集状态与覆盖范围</summary><p id="updated">尚未运行采集</p><ul id="sources"></ul><p>关键词分类可能有误差；“待核验”来自搜索片段。无发布日期的内容按发现时间展示。未出现新内容不代表该方向没有新研究。</p><details><summary>发现的候选来源域名</summary><p id="domains">暂无</p></details></details>
+</main>
+<footer>EMBODIED RADAR / 原文权利归各自作者所有 · 摘要仅供研究导航</footer>
+</body></html>

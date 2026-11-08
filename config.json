@@ -1,0 +1,20 @@
+{
+  "lookback_days": 7,
+  "arxiv_page_size": 100,
+  "arxiv_max_pages": 10,
+  "max_summaries_per_run": 20,
+  "feeds": [
+    {"name": "Berkeley AI Research", "kind": "高校", "url": "https://bair.berkeley.edu/blog/feed.xml"},
+    {"name": "NVIDIA Research", "kind": "企业", "url": "https://research.nvidia.com/rss.xml"}
+  ],
+  "search_queries": [
+    "\"vision language action\" robot",
+    "\"world action model\" robot",
+    "\"robot reinforcement learning\"",
+    "\"VLA\" \"reinforcement learning\"",
+    "\"vision tactile language action\"",
+    "具身 强化学习 论文",
+    "机器人 世界动作模型",
+    "机器人 视觉 触觉 语言 动作"
+  ]
+}
