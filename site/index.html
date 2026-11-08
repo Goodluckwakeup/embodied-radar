@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="每日追踪 VLA、WAM、具身强化学习与 VTLA 的论文和技术动态。">
   <title>Embodied Radar · 具身研究雷达</title>
-  <link rel="stylesheet" href="style.css"><script defer src="app.js"></script>
+  <link rel="stylesheet" href="style.css?v=2"><script defer src="filters.js?v=2"></script><script defer src="app.js?v=2"></script>
 </head>
 <body>
 <header><a class="brand" href="./">◉ EMBODIED RADAR</a><span>研究持续发生，线索汇集于此。</span></header>
@@ -17,10 +17,17 @@
   <section class="controls" aria-label="筛选文章">
     <label class="search">搜索标题、作者或摘要<input id="query" type="search" placeholder="试试 tactile、强化学习、作者姓名…"></label>
     <div class="filters"><label>研究方向<select id="topic"><option value="">全部方向</option><option>VLA</option><option>WAM</option><option>具身RL</option><option>VTLA</option></select></label>
-    <label>来源类型<select id="kind"><option value="">全部类型</option><option>论文</option><option>企业</option><option>高校</option><option>待核验</option></select></label>
-    <label>发现时间<select id="period"><option value="">全部时间</option><option value="1">今天（北京时间）</option><option value="7">最近 7 天</option><option value="30">最近 30 天</option></select></label>
-    <label>排序<select id="sort"><option value="discovery">最近发现</option><option value="published">发表时间</option><option value="updated">来源更新时间</option></select></label></div>
+    <label>来源类型<select id="kind"><option value="">全部类型</option></select></label>
+    <label>来源站点<select id="source"><option value="">全部来源</option></select></label></div>
+    <div class="filters"><label>时间依据<select id="time-field"><option value="published_at">发表时间</option><option value="updated_at">来源更新时间</option><option value="first_seen_at">首次发现时间</option></select></label>
+    <label>日期范围<select id="period"><option value="">全部时间</option><option value="1">今天</option><option value="7">最近 7 天（含今天）</option><option value="30">最近 30 天（含今天）</option><option value="custom">自定义日期</option></select></label>
+    <label>排序字段<select id="sort"><option value="updated">来源更新时间</option><option value="published">发表时间</option><option value="discovery">首次发现时间</option></select></label>
+    <label>排序方向<select id="order"><option value="desc">从新到旧</option><option value="asc">从旧到新</option></select></label></div>
+    <div id="custom-dates" class="filters" hidden><label>开始日期<input id="from" type="date"></label><label>结束日期<input id="to" type="date"></label></div>
+    <div class="filter-actions"><label class="checkbox"><input id="only-chinese" type="checkbox">只看已有中文摘要</label><button id="reset" type="button">清空筛选</button></div>
+    <p id="filter-help" class="small"></p>
   </section>
+  <aside class="summary-notice"><strong id="summary-coverage">正在读取中文摘要状态…</strong><p id="summary-help"></p><a href="https://github.com/Goodluckwakeup/embodied-radar/actions/workflows/daily.yml" target="_blank" rel="noopener noreferrer">运行更新或补齐中文摘要 ↗</a></aside>
   <div class="section-title"><h2>研究动态</h2><span id="count" aria-live="polite">正在加载…</span></div>
   <div id="list" aria-live="polite"></div><button id="more" hidden>再看 40 篇</button>
   <details class="status" open><summary>采集状态与覆盖范围</summary><p id="updated">尚未运行采集</p><ul id="sources"></ul><p>关键词分类可能有误差；“待核验”来自搜索片段。无发布日期的内容按发现时间展示。未出现新内容不代表该方向没有新研究。</p><details><summary>发现的候选来源域名</summary><p id="domains">暂无</p></details></details>

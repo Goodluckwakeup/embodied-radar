@@ -1,11 +1,21 @@
 name: Daily research update
 on:
   workflow_dispatch:
+    inputs:
+      task:
+        description: '运行内容：full=采集与摘要；summaries=只补齐摘要'
+        type: choice
+        options: [full, summaries]
+        default: full
+      summary_limit:
+        description: '本轮摘要尝试上限（0–100；可能产生 API 费用）'
+        type: number
+        default: 20
   schedule:
     - cron: '7 0 * * *' # 北京时间每天 08:07，云端调度可能延迟
   push:
     branches: [main]
-    paths: ['scripts/**', 'site/**', 'config.json', '.github/workflows/daily.yml']
+    paths: ['scripts/**', 'site/**', 'data/curated_summaries.json', 'config.json', '.github/workflows/daily.yml']
 
 permissions:
   contents: write
@@ -30,12 +40,20 @@ jobs:
           python-version: '3.13'
       - name: Check collector
         run: python -m unittest discover -s scripts -p 'test_*.py'
+      - name: Check filters
+        run: node --test scripts/test_filters.cjs
       - name: Collect articles
         env:
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-        run: python scripts/collect.py
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || secrets.OPENAI_MODEL }}
+          UPDATE_TASK: ${{ inputs.task || 'full' }}
+          SUMMARY_LIMIT: ${{ inputs.summary_limit }}
+        run: |
+          args=()
+          if [ "$UPDATE_TASK" = "summaries" ]; then args+=(--summaries-only); fi
+          if [ -n "$SUMMARY_LIMIT" ]; then args+=(--summary-limit "$SUMMARY_LIMIT"); fi
+          python scripts/collect.py "${args[@]}"
       - name: Save history
         run: |
           git config user.name 'github-actions[bot]'

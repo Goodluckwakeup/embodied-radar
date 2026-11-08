@@ -1,10 +1,44 @@
 import unittest
 from unittest.mock import patch
 import datetime as dt
+import json
+import hashlib
+import tempfile
+from pathlib import Path
 import collect
 
 
 class CollectorTests(unittest.TestCase):
+    def test_curated_summary_applies_only_to_matching_abstract(self):
+        row = dict(id='paper', abstract='original')
+        entry = dict(abstract_sha256=hashlib.sha256(b'original').hexdigest(), summary_zh='中文', title_zh='标题')
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'data').mkdir()
+            (root / 'data/curated_summaries.json').write_text(json.dumps({'paper': entry}), encoding='utf-8')
+            with patch.object(collect, 'ROOT', root):
+                changed = dict(row, abstract='revised')
+                collect.apply_curated([row, changed])
+                self.assertEqual(row['summary_zh'], '中文')
+                self.assertNotIn('summary_zh', changed)
+
+    def test_missing_model_configuration_never_calls_api(self):
+        with patch.dict(collect.os.environ, {}, clear=True), patch.object(collect, 'request') as request:
+            self.assertEqual(collect.summaries([], {'max_summaries_per_run': 20})['state'], 'skipped')
+            request.assert_not_called()
+
+    def test_summary_api_limit_and_cache(self):
+        rows = [dict(title='A', abstract='text', basis='论文摘要', summary_zh='已有摘要'),
+                dict(title='B', abstract='text', basis='论文摘要'),
+                dict(title='C', abstract='text', basis='论文摘要')]
+        response = {'status': 'completed', 'output': [{'content': [{'type': 'output_text', 'text': '新摘要'}]}]}
+        with patch.dict(collect.os.environ, {'OPENAI_API_KEY':'test-placeholder','OPENAI_MODEL':'test-model'}, clear=True), patch.object(collect, 'request', return_value=json.dumps(response).encode()) as request:
+            status = collect.summaries(rows, {'max_summaries_per_run':1})
+            self.assertEqual(request.call_count, 1)
+            self.assertEqual(status['count'], 1)
+            self.assertEqual(rows[1]['summary_zh'], '新摘要')
+            self.assertNotIn('summary_zh', rows[2])
+
     def test_revised_arxiv_does_not_duplicate_or_keep_stale_summary(self):
         first = collect.article('A VLA robot', 'https://arxiv.org/abs/2601.12345v1',
                                 'vision-language-action robot', 'arXiv', '论文', updated='2026-01-01')

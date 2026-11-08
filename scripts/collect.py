@@ -235,6 +235,8 @@ def merge(existing, incoming, stamp):
                 previous.update(item)
                 if changed:
                     previous.pop('summary_zh', None)
+                    previous.pop('title_zh', None)
+                    previous.pop('summary_model', None)
                     previous['content_changed_at'] = stamp
             previous.update(links=links, topics=tags, last_seen_at=stamp)
         else:
@@ -285,18 +287,54 @@ def summaries(rows, config):
                 return dict(source='中文摘要', state='partial', count=done,
                             detail=f'{error_name(error)}；已停止本轮摘要，请检查权限或额度')
     return dict(source='中文摘要', state='partial' if failed else 'ok', count=done,
-                detail=f'本轮成功 {done}，失败 {failed}；每轮最多处理 {config["max_summaries_per_run"]} 篇')
+                detail=f'本轮成功 {done}，失败 {failed}；尚有 {sum(not r.get("summary_zh") and r["basis"] != "搜索片段（待核验）" for r in rows)} 篇待生成；每轮最多处理 {config["max_summaries_per_run"]} 篇')
+
+
+def apply_curated(rows):
+    path = ROOT / 'data/curated_summaries.json'
+    if not path.exists():
+        return
+    curated = json.loads(path.read_text(encoding='utf-8'))
+    for row in rows:
+        item = curated.get(row['id'])
+        digest = hashlib.sha256(row.get('abstract', '').encode()).hexdigest()
+        if item and item['abstract_sha256'] == digest and not row.get('summary_zh'):
+            row.update(summary_zh=item['summary_zh'], title_zh=item['title_zh'],
+                       summary_model='assistant-curated-from-source-abstract')
+
+
+def save_data(data):
+    content = json.dumps(data, ensure_ascii=False, indent=2) + '\n'
+    path = ROOT / 'data/articles.json'
+    path.parent.mkdir(exist_ok=True)
+    path.with_suffix('.tmp').write_text(content, encoding='utf-8')
+    path.with_suffix('.tmp').replace(path)
+    (ROOT / 'site/data.json').write_text(content, encoding='utf-8')
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--no-ai', action='store_true', help='禁止本轮调用摘要 API')
     parser.add_argument('--no-search', action='store_true', help='禁止本轮调用搜索 API')
+    parser.add_argument('--summaries-only', action='store_true', help='只补齐已有文章摘要，不重新采集')
+    parser.add_argument('--summary-limit', type=int, help='本轮摘要尝试上限，范围 0 到 100')
     args = parser.parse_args()
     config = json.loads((ROOT / 'config.json').read_text(encoding='utf-8'))
+    if args.summary_limit is not None:
+        if not 0 <= args.summary_limit <= 100:
+            parser.error('--summary-limit 必须在 0 到 100 之间')
+        config['max_summaries_per_run'] = args.summary_limit
     path = ROOT / 'data/articles.json'
     old = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {'articles': []}
     stamp = now()
+    if args.summaries_only:
+        apply_curated(old['articles'])
+        status = dict(source='中文摘要', state='skipped', detail='本轮未启用') if args.no_ai else summaries(old['articles'], config)
+        old['sources'] = [s for s in old.get('sources', []) if s['source'] != '中文摘要'] + [status]
+        old['summary_updated_at'] = stamp
+        save_data(old)
+        print('摘要更新完成：' + status['state'])
+        return
     cutoff = dt.datetime.now(UTC) - dt.timedelta(days=config['lookback_days'])
     candidates, statuses = [], []
     try:
@@ -317,6 +355,7 @@ def main():
     candidates.extend(rows)
     statuses.extend(search_statuses)
     rows = merge(old['articles'], candidates, stamp)
+    apply_curated(rows)
     collection = list(statuses)
     statuses.append(dict(source='中文摘要', state='skipped', detail='本轮未启用') if args.no_ai else summaries(rows, config))
     state = 'ok' if all(s['state'] == 'ok' for s in collection) else 'partial'
@@ -326,12 +365,8 @@ def main():
     data = dict(last_attempt_at=stamp, state=state,
                 last_complete_at=stamp if state == 'ok' else old.get('last_complete_at'),
                 sources=statuses, candidate_domains=domains, articles=rows)
-    content = json.dumps(data, ensure_ascii=False, indent=2) + '\n'
-    path.parent.mkdir(exist_ok=True)
     # Old records remain intact when any source fails.
-    path.with_suffix('.tmp').write_text(content, encoding='utf-8')
-    path.with_suffix('.tmp').replace(path)
-    (ROOT / 'site/data.json').write_text(content, encoding='utf-8')
+    save_data(data)
     print(f'采集状态 {state}，候选 {len(candidates)}，历史文章 {len(rows)}')
 
 
