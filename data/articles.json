@@ -1,13 +1,12 @@
 {
-  "last_attempt_at": "2026-11-24T09:42:01+00:00",
+  "last_attempt_at": "2026-11-25T08:14:59+00:00",
   "state": "partial",
   "last_complete_at": null,
   "sources": [
     {
       "source": "arXiv",
-      "state": "ok",
-      "count": 289,
-      "detail": "窗口扫描完成"
+      "state": "error",
+      "detail": "HTTP 429"
     },
     {
       "source": "Berkeley AI Research",
