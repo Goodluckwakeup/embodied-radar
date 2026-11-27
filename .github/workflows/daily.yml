@@ -3,14 +3,14 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: 'full=采集、评分、精选和摘要；summaries=补摘要；daily=仅更新精选和摘要'
+        description: 'full=采集、评分、精选和摘要；summaries=补当天精选摘要；daily=仅更新精选和摘要'
         type: choice
         options: [full, summaries, daily]
         default: full
       summary_limit:
         description: '本轮摘要尝试上限（0–100；可能产生 API 费用）'
         type: number
-        default: 20
+        default: 12
   schedule:
     - cron: '7 0 * * *' # 北京时间每天 08:07，云端调度可能延迟
   push:
