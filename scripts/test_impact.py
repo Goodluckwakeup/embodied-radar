@@ -1,5 +1,7 @@
 import datetime as dt
 import json
+import gzip
+import io
 import unittest
 from unittest.mock import patch
 
@@ -16,6 +18,11 @@ def rate(instructions, source):
 
 
 class ImpactTests(unittest.TestCase):
+    def test_gzip_feed_response_is_decoded(self):
+        xml = b'<rss><channel/></rss>'
+        with patch.object(collect.urllib.request, 'urlopen', return_value=io.BytesIO(gzip.compress(xml))):
+            self.assertEqual(collect.request('https://example.org/feed'), xml)
+
     def test_impact_cache_and_content_invalidation(self):
         rows = papers(12)
         self.assertEqual(assess_impact(rows, [], STAMP, {}, rate, 'test')['count'], 12)

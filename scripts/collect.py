@@ -2,6 +2,8 @@
 import datetime as dt
 import argparse
 import hashlib
+import gzip
+import io
 import html
 from html.parser import HTMLParser
 import json
@@ -51,7 +53,13 @@ def request(url, headers=None, payload=None):
                                      headers={'User-Agent': UA, **(headers or {})})
         try:
             with urllib.request.urlopen(req, timeout=45) as response:
-                return response.read(8_000_000)
+                content = response.read(8_000_001)
+                if content.startswith(b'\x1f\x8b'):
+                    with gzip.GzipFile(fileobj=io.BytesIO(content)) as compressed:
+                        content = compressed.read(8_000_001)
+                if len(content) > 8_000_000:
+                    raise ValueError('来源响应超过大小限制')
+                return content
         except urllib.error.HTTPError as error:
             if error.code not in (429, 500, 502, 503, 504) or attempt == 2:
                 raise
