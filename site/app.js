@@ -15,6 +15,7 @@ function render() {
   for(const r of rows.slice(0,limit)){
     const card=el('article'),meta=el('div',null,'meta');for(const tag of r.topics||[])meta.append(el('span',tag,'tag'));
     meta.append(el('span',r.kind+' · '+r.source));const title=el('h3',null,'title');title.append(link(r.title_zh||r.title,r.url));card.append(meta,title);
+    if(r.official_sources?.length)card.append(el('p','机构论文目录收录：'+r.official_sources.join('、'),'small'));
     if(r.title_zh)card.append(el('p',r.title,'small'));if(r.authors?.length)card.append(el('p',r.authors.join(' · '),'small'));
     if(r.summary_zh)card.append(el('p','中文摘要','summary-label'),el('p',r.summary_zh,'abstract'));
     else{card.append(el('p',r.basis==='搜索片段（待核验）'?'搜索线索，待核验原文':'中文摘要待生成 · 下面为来源原文摘录','small'));const excerpt=r.abstract||'来源未提供摘要，请查看原文。';card.append(el('p',excerpt.slice(0,480)+(excerpt.length>480?'…':''),'abstract'));}

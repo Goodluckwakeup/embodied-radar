@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="每日追踪 VLA、WAM、具身强化学习与 VTLA 的论文和技术动态。">
   <title>Embodied Radar · 具身研究雷达</title>
-  <link rel="stylesheet" href="style.css?v=4"><script defer src="filters.js?v=2"></script><script defer src="app.js?v=4"></script>
+  <link rel="stylesheet" href="style.css?v=5"><script defer src="filters.js?v=2"></script><script defer src="app.js?v=5"></script>
 </head>
 <body>
 <header><a class="brand" href="./">◉ EMBODIED RADAR</a><span>研究持续发生，线索汇集于此。</span></header>
@@ -17,6 +17,7 @@
   <section id="edition" class="edition" aria-label="每日论文精选">
     <div class="section-title"><h2 id="edition-heading">每日精选</h2><label>往期精选<select id="edition-date" aria-label="选择精选日期"></select></label></div>
     <p id="edition-meta" aria-live="polite">正在读取每日精选…</p>
+    <p class="small">采集顺序：arXiv 主检索 → 清华、北大、上交等机构论文目录与官方订阅补漏 → 去重评分 → 每天 12 篇。机构关联不等于作者单位认证。</p>
     <details class="scoring"><summary>评分与筛选依据</summary><p>阅读优先级满分 100。主题相关性 30 分、实验信息 20 分、阅读信息量 15 分、时效性 15 分、潜在影响力 20 分。影响力由模型依据摘要评估贡献、可复用性和可验证性，不等于真实引用量，也不按机构名气加分。先按规则选出最多 36 篇候选，再评估影响力并排序；未成功评估会明确标注。根据标题与摘要中的主题、实验、对照、定量结果、泛化和方法线索计算，关键词命中不代表实验质量已经核实。</p><p>从最近 30 天发表的论文中选取 12 篇，前 2 篇推荐精读，其余 10 篇推荐略读；同篇论文 30 天内不重复推荐。候选不足时显示实际数量。摘要和精读建议均依据来源摘要，精读时请核对论文全文。</p></details>
     <div id="edition-list"></div>
   </section>
