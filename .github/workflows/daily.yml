@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: '运行内容：full=采集与摘要；summaries=只补齐摘要'
+        description: 'full=采集、评分、精选和摘要；summaries=补摘要；daily=仅更新精选和摘要'
         type: choice
-        options: [full, summaries]
+        options: [full, summaries, daily]
         default: full
       summary_limit:
         description: '本轮摘要尝试上限（0–100；可能产生 API 费用）'
@@ -35,6 +35,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
@@ -47,13 +49,30 @@ jobs:
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || secrets.OPENAI_MODEL }}
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
+          OPENAI_API_FORMAT: ${{ vars.OPENAI_API_FORMAT }}
           UPDATE_TASK: ${{ inputs.task || 'full' }}
           SUMMARY_LIMIT: ${{ inputs.summary_limit }}
         run: |
           args=()
           if [ "$UPDATE_TASK" = "summaries" ]; then args+=(--summaries-only); fi
+          if [ "$UPDATE_TASK" = "daily" ]; then args+=(--daily-only); fi
           if [ -n "$SUMMARY_LIMIT" ]; then args+=(--summary-limit "$SUMMARY_LIMIT"); fi
           python scripts/collect.py "${args[@]}"
+      - name: Report daily selection
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          data = json.loads(Path('site/data.json').read_text(encoding='utf-8'))
+          edition = data['daily_editions'][0]
+          message = f"每日精选 {edition['date']} — {len(edition['items'])}/12 篇，中文摘要 {edition['summary_count']}/{len(edition['items'])} 篇。\n"
+          if edition['state'] != 'complete':
+              message += '本期尚未完整生成，请检查候选数量及中文摘要配置或额度。\n'
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as output:
+              output.write(message)
+          PY
       - name: Save history
         run: |
           git config user.name 'github-actions[bot]'
