@@ -45,12 +45,12 @@ fetch('data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('HTTP '+
   renderEdition();
   populate('kind',records.map(r=>r.kind),'全部类型',['论文','企业','高校','待核验']);populate('source',records.map(r=>r.source),'全部来源');
   $('total').textContent=records.length;$('today').textContent=records.filter(r=>dayKey(r.first_seen_at)===dayKey(Date.now())).length;
-  const channels=(data.sources||[]).filter(s=>s.source!=='中文摘要');$('checked').textContent=channels.filter(s=>s.state==='ok').length+'/'+channels.length;
+  const channels=(data.sources||[]).filter(s=>!['中文摘要','潜在影响力评分'].includes(s.source));$('checked').textContent=channels.filter(s=>s.state==='ok').length+'/'+channels.length;
   const n=records.filter(r=>r.summary_zh).length,s=(data.sources||[]).find(s=>s.source==='中文摘要');
   $('summary-coverage').textContent='中文摘要 '+n+' / '+records.length+' 篇。';
-  $('summary-help').textContent=n===records.length&&n?'已有摘要会优先展示，原始摘录可展开查看。':'其余摘要需要通过 GitHub Actions 补齐。'+(s?.detail||'')+'。已生成的摘要会缓存。';
+  $('summary-help').textContent=n===records.length&&n?'已有摘要会优先展示，原始摘录可展开查看。':'自动摘要仅覆盖当天精选的 12 篇；历史记录保留原文。'+(s?.detail||'')+'。已生成的摘要会缓存。';
   $('updated').textContent='最近尝试：'+fmt(data.last_attempt_at)+' · 采集状态：'+(({ok:'完成',partial:'部分完成／部分功能未启用',error:'失败',not_run:'尚未运行'})[data.state]||data.state)+' · 最近全渠道成功：'+fmt(data.last_complete_at);
-  for(const s of data.sources||[])$('sources').append(el('li',s.source+'：'+({ok:'成功',partial:'部分完成',error:'失败',skipped:'未启用'})[s.state]+(s.count!=null?' · '+s.count+' 条':'')+(s.detail?' · '+s.detail:''),s.state));
+  for(const s of data.sources||[]){const li=el('li',s.source+'：'+({ok:'成功',partial:'部分完成',error:'失败',skipped:'未启用'})[s.state]+(s.count!=null?' · '+s.count+' 条':'')+(s.detail?' · '+s.detail:''),s.state);if(s.url)li.append(' ',link('官方订阅来源 ↗',s.url));$('sources').append(li);}
   $('domains').textContent=data.candidate_domains?.join('、')||'暂无。搜索发现的域名需要核验后再加入固定订阅源。';render();
 }).catch(error=>{$('count').textContent='加载失败';$('list').replaceChildren(el('p','数据加载失败（'+error.message+'）。请刷新页面重试。','error'));});
 
@@ -69,7 +69,7 @@ function renderEdition() {
   for (const item of edition.items) {
     const row = item.article, rating = item.rating;
     const card = el('article', null, 'edition-card ' + item.reading);
-    card.append(el('p', (item.reading === 'deep' ? '精读推荐' : '略读推荐') + ' · 阅读优先级 ' + rating.score + ' / 100', 'recommendation'));
+    card.append(el('p', (item.reading === 'deep' ? '精读推荐' : '略读推荐') + ' · 阅读优先级 ' + rating.score + ' / 100' + (rating.impact_assessed ? '' : ' · 影响力未评估'), 'recommendation'));
     const title = el('h3', null, 'title');
     title.append(link(row.title_zh || row.title, row.url));
     card.append(title);
@@ -79,7 +79,7 @@ function renderEdition() {
     if (item.reading === 'deep') card.append(el('p', '精读关注：核对方法假设、基线公平性、消融实验和跨任务泛化；检查真实机器人证据及失败案例。', 'reading-guide'));
     const details = el('details', null, 'original');
     details.append(el('summary', '查看分项评分与来源摘要'));
-    details.append(el('p', Object.entries(rating.components).map(([name, value]) => name + ' ' + value).join(' · '), 'small'));
+    details.append(el('p', Object.entries(rating.components).map(([name, value]) => name + ' ' + (name === '潜在影响力' && !rating.impact_assessed ? '未评估' : value)).join(' · '), 'small'));
     details.append(el('p', row.abstract, 'abstract'));
     card.append(details, link('阅读论文 ↗', row.url));
     list.append(card);
