@@ -1,5 +1,6 @@
 {
   "lookback_days": 7,
+  "institution_lookback_days": 30,
   "arxiv_page_size": 100,
   "arxiv_max_pages": 10,
   "max_summaries_per_run": 12,
@@ -46,6 +47,18 @@
     "机器人 视觉 触觉 语言 动作"
   ],
   "official_pages": [
+    {
+      "name": "清华大学 · 许华哲课题组",
+      "url": "http://hxu.rocks/publication.html"
+    },
+    {
+      "name": "北京大学 · EPIC Lab",
+      "url": "https://pku-epic.github.io/"
+    },
+    {
+      "name": "上海交通大学 · MVIG",
+      "url": "https://www.mvig.org/publications.html"
+    },
     {
       "name": "Stanford IPRL",
       "url": "https://iprl.stanford.edu/publications.html"

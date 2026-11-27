@@ -15,7 +15,7 @@
 
 ## 官方订阅与影响力
 
-每天 08:07（北京时间，云端可能延迟）检查 8 个官方来源：Berkeley AI Research、NVIDIA Research、Google DeepMind、CMU Robotics Institute、MIT Robotics、Stanford IPRL、OpenDriveLab、HKU MARS。前五个读取 RSS，后三个扫描官方论文索引中的 arXiv 链接并查询论文元数据；单个索引每轮最多查询最近 60 个编号，按日期及具身主题过滤。官方页面收录关系不等于作者单位认证。无更新和请求失败分别显示。
+每天 08:07（北京时间，云端可能延迟）先以 arXiv 为主库完成检索，再检查 11 个机构来源补漏：清华大学许华哲课题组、北京大学 EPIC Lab、上海交通大学 MVIG、Berkeley AI Research、NVIDIA Research、Google DeepMind、CMU Robotics Institute、MIT Robotics、Stanford IPRL、OpenDriveLab、HKU MARS。Berkeley、NVIDIA、DeepMind、CMU、MIT 读取 RSS，其余六个扫描官方论文索引中的 arXiv 链接并查询论文元数据；单个索引每轮最多查询最近 60 个编号，按日期及具身主题过滤。官方页面收录关系不等于作者单位认证。无更新和请求失败分别显示。机构补充回看近 30 天（`institution_lookback_days`），减少官方页面延迟收录造成的遗漏；按 arXiv ID、URL 和标题合并，并展示新增条数及已收录关联条数。机构订阅不是全校论文的完整覆盖，也不会各自再推送 12 篇。所有来源合并后统一选 2 篇精读、10 篇略读。
 
 潜在影响力先对规则排名前 36 篇候选（以及当天已选论文）评估，再选 12 篇。模型依据标题与摘要判断贡献价值（10）、跨任务复用（5）、可验证性（5）；不伪造引用次数、不按机构声望加分。缓存与模型和内容哈希绑定；失败保留已有结果并标注未评估。该分数不是经过引用数据库验证的学术影响力。每天只给精选论文生成摘要，历史文章不会自动批量回填。
 
