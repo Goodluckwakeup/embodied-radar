@@ -2,14 +2,38 @@
   "lookback_days": 7,
   "arxiv_page_size": 100,
   "arxiv_max_pages": 10,
-  "max_summaries_per_run": 20,
+  "max_summaries_per_run": 12,
   "daily_selection": {
     "lookback_days": 30,
-    "repeat_after_days": 30
+    "repeat_after_days": 30,
+    "impact_candidates": 36
   },
   "feeds": [
-    {"name": "Berkeley AI Research", "kind": "高校", "url": "https://bair.berkeley.edu/blog/feed.xml"},
-    {"name": "NVIDIA Research", "kind": "企业", "url": "https://research.nvidia.com/rss.xml"}
+    {
+      "name": "Berkeley AI Research",
+      "kind": "高校",
+      "url": "https://bair.berkeley.edu/blog/feed.xml"
+    },
+    {
+      "name": "NVIDIA Research",
+      "kind": "企业",
+      "url": "https://research.nvidia.com/rss.xml"
+    },
+    {
+      "name": "Google DeepMind",
+      "kind": "企业",
+      "url": "https://deepmind.google/blog/rss.xml"
+    },
+    {
+      "name": "CMU Robotics Institute",
+      "kind": "高校",
+      "url": "https://www.ri.cmu.edu/feed/"
+    },
+    {
+      "name": "MIT Robotics",
+      "kind": "高校",
+      "url": "https://news.mit.edu/topic/mitrobotics-rss.xml"
+    }
   ],
   "search_queries": [
     "\"vision language action\" robot",
@@ -20,5 +44,19 @@
     "具身 强化学习 论文",
     "机器人 世界动作模型",
     "机器人 视觉 触觉 语言 动作"
+  ],
+  "official_pages": [
+    {
+      "name": "Stanford IPRL",
+      "url": "https://iprl.stanford.edu/publications.html"
+    },
+    {
+      "name": "OpenDriveLab",
+      "url": "https://opendrivelab.com/publications"
+    },
+    {
+      "name": "HKU MARS",
+      "url": "https://mars.hku.hk/publications.html"
+    }
   ]
 }
