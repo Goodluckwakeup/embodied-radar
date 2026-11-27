@@ -9,6 +9,33 @@ import collect
 
 
 class CollectorTests(unittest.TestCase):
+    def test_chat_completions_provider_and_completed_output(self):
+        row = dict(title='Robot', abstract='Source abstract', basis='论文摘要')
+        response = {'choices': [{'finish_reason': 'stop', 'message': {'content': '中文摘要'}}]}
+        env = {'OPENAI_API_KEY': 'test-placeholder', 'OPENAI_MODEL': 'test-model',
+               'OPENAI_BASE_URL': 'https://example.com/api/v1/', 'OPENAI_API_FORMAT': 'chat_completions'}
+        with patch.dict(collect.os.environ, env, clear=True), patch.object(collect, 'request', return_value=json.dumps(response).encode()) as request:
+            status = collect.summaries([row], {'max_summaries_per_run': 1})
+            self.assertEqual(status['count'], 1)
+            self.assertEqual(request.call_args.args[0], 'https://example.com/api/v1/chat/completions')
+            payload = json.loads(request.call_args.args[2])
+            self.assertEqual(payload['messages'][0]['role'], 'system')
+            self.assertEqual(row['summary_zh'], '中文摘要')
+
+    def test_truncated_chat_summary_is_not_cached(self):
+        row = dict(title='Robot', abstract='Source', basis='论文摘要')
+        response = {'choices': [{'finish_reason': 'length', 'message': {'content': '不完整'}}]}
+        env = {'OPENAI_API_KEY': 'test-placeholder', 'OPENAI_MODEL': 'test-model', 'OPENAI_API_FORMAT': 'chat_completions'}
+        with patch.dict(collect.os.environ, env, clear=True), patch.object(collect, 'request', return_value=json.dumps(response).encode()):
+            self.assertEqual(collect.summaries([row], {'max_summaries_per_run': 1})['state'], 'partial')
+            self.assertNotIn('summary_zh', row)
+
+    def test_invalid_provider_configuration_never_sends_secret(self):
+        env = {'OPENAI_API_KEY': 'test-placeholder', 'OPENAI_MODEL': 'test-model', 'OPENAI_BASE_URL': 'http://example.com/v1'}
+        with patch.dict(collect.os.environ, env, clear=True), patch.object(collect, 'request') as request:
+            self.assertEqual(collect.summaries([], {'max_summaries_per_run': 1})['state'], 'error')
+            request.assert_not_called()
+
     def test_curated_summary_applies_only_to_matching_abstract(self):
         row = dict(id='paper', abstract='original')
         entry = dict(abstract_sha256=hashlib.sha256(b'original').hexdigest(), summary_zh='中文', title_zh='标题')
