@@ -3,6 +3,10 @@
   "arxiv_page_size": 100,
   "arxiv_max_pages": 10,
   "max_summaries_per_run": 20,
+  "daily_selection": {
+    "lookback_days": 30,
+    "repeat_after_days": 30
+  },
   "feeds": [
     {"name": "Berkeley AI Research", "kind": "高校", "url": "https://bair.berkeley.edu/blog/feed.xml"},
     {"name": "NVIDIA Research", "kind": "企业", "url": "https://research.nvidia.com/rss.xml"}
