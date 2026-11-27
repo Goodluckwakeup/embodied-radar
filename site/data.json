@@ -1,12 +1,12 @@
 {
-  "last_attempt_at": "2026-11-26T08:02:03+00:00",
+  "last_attempt_at": "2026-11-27T05:29:11+00:00",
   "state": "partial",
   "last_complete_at": null,
   "sources": [
     {
       "source": "arXiv",
       "state": "ok",
-      "count": 302,
+      "count": 263,
       "detail": "窗口扫描完成"
     },
     {
@@ -26,8 +26,9 @@
     },
     {
       "source": "中文摘要",
-      "state": "skipped",
-      "detail": "需要 OPENAI_API_KEY 和 OPENAI_MODEL"
+      "state": "ok",
+      "count": 20,
+      "detail": "本轮成功 20，失败 0；尚有 794 篇待生成；每轮最多处理 20 篇"
     }
   ],
   "candidate_domains": [],
@@ -55,7 +56,7 @@
         "https://arxiv.org/abs/2611.34936v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 70,
@@ -74,7 +75,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "47e4d794dd6560cbba9af6083d29bec70beff4c9b82cafb7a50390d7fe758358"
-      }
+      },
+      "summary_zh": "DexLink针对灵巧操作中人类示范难扩展、通用奖励难精细控制的问题，将稀疏可复用的手物交互模板优化适配目标物体，串联为参考轨迹，再用残差强化学习形成闭环策略。单手、双手、关节物体及动态任务实验显示，其可控制时序与抓握类型，模板能跨尺度、实例和类别迁移；无需物体专属示范即可匹配密集参考跟踪方法，零样本部署亦显示潜力。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Cairn: Object-Centric 3D Trajectory Priors for Steering Frozen VLAs",
@@ -98,7 +101,7 @@
         "https://arxiv.org/abs/2611.34914v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -119,7 +122,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "5ee3c130a8f2891a4d1dc4478d4443b1721cff455162a5bb601b0a506f4cc1c7"
-      }
+      },
+      "summary_zh": "Cairn针对VLA在布局变化时易误放物体或碰撞的问题，冻结模型，用学习到的轨迹先验根据点云、抓取姿态和指令生成物体三维轨迹，通过双向反馈引导动作去噪。摘要报告：在1,941个留出LIBERO场景中，π0.5成功率从24.5%升至95.1%，标准LIBERO表现未受损；另有LIBERO-PRO及真实Franka实验支持。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Failure Detection for Surgical Robot Imitation Policies via Flow-Matching World Modeling",
@@ -146,7 +151,7 @@
         "https://arxiv.org/abs/2607.27511v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 78,
@@ -169,7 +174,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "3a90e2bfc1cbd82b4a0904937da1da7792450162abe740727317751f354232c7"
-      }
+      },
+      "summary_zh": "针对手术机器人模仿策略失效数据稀缺、漏检与误报难平衡的问题，FoMo-FD用动作条件流匹配世界模型学习正常短期视觉动态，以逆输运不符合度检测偏离，并用成功轨迹进行保形阈值校准，无需失效示范。摘要报告：在涵盖4项任务、20种失效模式的仿真与dVRK实机实验中，主模型腕部视角检出率为95.6%、误报率为2.5%，检出率优于所评估基线。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "RePace: Reasoning about Demonstration Speedup for Faster Vision-Language-Action Policies",
@@ -197,7 +204,7 @@
         "https://arxiv.org/abs/2611.34864v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 56,
@@ -215,7 +222,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "26711a3b803220bb3721558503f9aac36292e61d1f501ec71a149aadfb46ebac"
-      }
+      },
+      "summary_zh": "RePace针对VLA策略继承人类示范慢节奏、固定加速倍数难以兼顾精细操作的问题，离线比较候选加速方案的序列缩短与观测—动作配对变化，由预训练语言模型结合任务、视觉和运动信息选择整段加速配置。摘要报告，其在LIBERO和RoboCasa-Kitchen上整体执行效率优于基线；真实机械臂三项任务中，成功率持平或更高，成功试验耗时更短。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "HOG-WAM: Improving Visual Robustness through Future Gradient Prediction",
@@ -244,7 +253,7 @@
         "https://arxiv.org/abs/2611.34811v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -265,7 +274,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "3c60f1738031abd70147845f6d1b019f0becee736c866a289a10ea86c1b9c946"
-      }
+      },
+      "summary_zh": "针对视觉扰动降低控制策略鲁棒性的问题，HOG-WAM从示范图像提取未来HOG作为结构监督，借助非对称注意力辅助训练，推理时移除辅助模块。摘要报告：RoboTwin-Plus四类扰动下成功率均居对比策略首位，混合噪声成功率由78.86%升至82.86%；四项Franka实机任务中，噪声条件下平均成功率由17%升至24%。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Toward Agentic Robotics: A Large-Scale Study of Harness Design for Robot-Use Agents",
@@ -299,7 +310,7 @@
         "https://arxiv.org/abs/2611.34778v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -318,7 +329,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "c232a6ac19eaa531a52cdf6b6ecf63a823086476fae40cba4ae613fd76c6235d"
-      }
+      },
+      "summary_zh": "研究针对VLM精细操控不足、VLA/WAM难应对域偏移及长程记忆推理的问题，探索融合二者的策略编排设计。通过8个仿真基准、6个VLM及15个VLA/WAM检查点上的逾47万次试验和7项受控研究，发现编排需适配两类模型的能力。摘要报告，X-Harness无需更新权重，在记忆、推理和域偏移任务中使基础策略表现最高提升42.8个百分点。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "ELMO: Emergent Representations In Imitation Learning Via Dynamic Hierarchical Action Chunking",
@@ -343,7 +356,7 @@
         "https://arxiv.org/abs/2611.34741v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 95,
@@ -402,7 +415,7 @@
         "https://arxiv.org/abs/2610.29560v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 68,
@@ -423,7 +436,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "9661296cf109ae1dcb3c2a73402d0deac9cfc69773af5fc78ebdd742f48860ef"
-      }
+      },
+      "summary_zh": "针对长时程机器人操作中的历史依赖、部分可观测性与执行误差，SERA以可编辑框架组织高层视觉语言规划，利用观测和执行反馈维护上下文，底层VLA执行器保持固定。框架在仿真中迭代评估并于测试前冻结。摘要报告，RoboMME上自主选择配置的成功率为51.38%，无自演化时为44.38%；另开展了含人工审核框架修正的真机评估。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "A Failure-Driven Data Flywheel for Post-Training Vision-Language-Action Models",
@@ -452,7 +467,7 @@
         "https://arxiv.org/abs/2611.34698v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 61,
@@ -471,7 +486,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "8819ca249aeef9fab02d7263b48260184048663bb38bfc83c9acdfe99d23e464"
-      }
+      },
+      "summary_zh": "针对VLA模型适配新平台时行为不达标、失败数据不足的问题，研究提出失败驱动的数据飞轮：在重建实景中插入任务实体，按行为要求评估，并依据逐轮更新的失败图分配数据生成量。仿真与实车测试显示，五轮后训练提升遮挡行人场景的无碰撞率及停车线前停车率；实车安全通过由1/5增至4/5。但收益主要体现为提前减速，行人出现后的制动能力仍有限。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "RoboEvo$^2$: Recursive Robot Self-Improvement via Harness-Policy Co-Evolution",
@@ -504,7 +521,7 @@
         "https://arxiv.org/abs/2611.34675v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -525,7 +542,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "8efcccc18b1f89fa667fd9bba5adb74d45b2b65adc9c84d7d8cc768fb0a9310f"
-      }
+      },
+      "summary_zh": "研究针对机器人适应新环境依赖人工示范、推理成本高的问题，提出控制框架与策略递归协同进化：用策略失败引导代码搜索，用验证轨迹和反事实偏好蒸馏训练策略。摘要报告，无新增人工示范时，LIBERO-PRO独立策略成功率从11.0%升至84.1%，混合系统从30.4%升至90.5%；RoboTwin C2R上也有提升且智能体成本降低。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Nav4Manip: From Navigation to Dexterous Mobile Manipulation through Co-Evolution",
@@ -557,7 +576,7 @@
         "https://arxiv.org/abs/2611.34655v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 87,
@@ -579,7 +598,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "383b354181af07ed514057c40625b5d00811fc5c46d356529d52a7c3fe503b2a"
-      }
+      },
+      "summary_zh": "Nav4Manip针对导航精度不足、导航与操作独立训练的问题，通过操作反馈优化导航，并训练世界—动作模型支持灵巧操作；导航训练结合多任务共调、拒绝采样微调和AI反馈强化学习。研究构建导航—操作基准及配对轨迹数据。摘要报告其在公共视觉语言导航及自建基准上达到领先表现，并在真实环境中完成多类灵巧移动操作任务。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Motion Beyond Pixels: Learning Future Visual Representations for Object-Centric Dynamics",
@@ -610,7 +631,7 @@
         "https://arxiv.org/abs/2611.34644v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 83,
@@ -631,7 +652,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "d3b17c518961e0621987ef3cabfc77307cb4a013f7d8a0f5ade4d38063ea7e70"
-      }
+      },
+      "summary_zh": "针对RGB重建潜空间未充分突出运动所需物体语义与几何的问题，MotionRep用DINO-VAE压缩视觉特征，以统一扩散Transformer联合预测未来表征与3D物体流，并通过非对称噪声调度让视觉表征引导流生成。摘要报告，在仿真与真实操作基准上，其物体流精度及未见场景泛化优于像素基线，推理仅需3步去噪。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "DiffGR00T: Execution-Aware Differentiable Training for Humanoid Whole-Body Vision-Language-Action Models",
@@ -659,7 +682,7 @@
         "https://arxiv.org/abs/2611.32665v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -678,7 +701,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "35c06e0829c3586c4eafc09809f753980d933ed0f7b4faee533831c4ca74d3f2"
-      }
+      },
+      "summary_zh": "DiffGR00T针对人形VLA运动生成与物理执行脱节的问题，将VLA与全身控制器耦合，用动作条件世界模型替代不可微仿真器，使多步执行损失经冻结控制器和采样器反传至VLA动作头。摘要报告，在四项HumanoidArena仿真任务中，平均成功率从59.2%升至71.7%，提高12.5个百分点，支持执行反馈有助于改善全身控制。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "EqC: Equilibrium Energy Control for Introspective Lifelong Robot Learning",
@@ -709,7 +734,7 @@
         "https://arxiv.org/abs/2610.18790v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 56,
@@ -728,7 +753,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "99edfa5f75edebd6b7ffda5ac75d5d91448d34e76df68a4ad910ed521947ad7d"
-      }
+      },
+      "summary_zh": "研究针对机器人长期自主运行中识别能力边界并持续学习的问题，提出EqC：以条件能量景观将动作细化建模为寻求平衡的优化，持续违反能量一致性时触发专家接管，并汇集恢复轨迹更新策略。摘要报告，仿真及真实双臂操作中，控制性能与鲁棒性持平或提升，并能在能力边界附近及时干预；真实场景研究显示，干预使自主应对范围逐步扩大。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Commit2Drive: Perception-Grounded Language Decisions as Commitments for Trajectory Planning in Vision-Language-Action Driving Models",
@@ -752,7 +779,7 @@
         "https://arxiv.org/abs/2611.34614v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 61,
@@ -771,7 +798,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "63f7c9addb0ae581ef217cf30f175a5036ca01d3c85255f768b3dd5a492a19ac"
-      }
+      },
+      "summary_zh": "Commit2Drive针对自动驾驶中语言决策与轨迹不一致的问题，将感知事实支撑的决策设为轨迹规划约束，通过机动库编码、一致性损失及自动标注与反事实训练，使轨迹遵循决策。摘要报告，其0.5B语言模型在Bench2Drive上获驾驶得分78.50、成功率55.91%，并显著减少语言与动作不一致，可在单张消费级显卡上在线闭环推理。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "M$^{2}$AdaptVLA: Multimodal Memory-Augmented Vision-Language-Action Model with Predictive Test-Time Adaptation",
@@ -801,7 +830,7 @@
         "https://arxiv.org/abs/2611.34560v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -823,7 +852,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "cfbeeb03c15df6a09c61219fa7eb547a92a82f7864664fa798b75f96dbcfaca5"
-      }
+      },
+      "summary_zh": "研究针对机器人操作中多模态历史利用不足、接触动力学变化下适应困难的问题，融合快速权重视觉记忆与门控力/力矩记忆，并以力/力矩预测误差在线更新低秩策略适配器。摘要报告，真实机器人实验中，视觉记忆与门控机制优于所比较基线，在线适应提升鲁棒性；八项任务平均成功率为82.71%，较最强基线高31.46个百分点。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Dynamic Task Update Benchmark (DTU-Bench): Evaluating Runtime Task Adaptation in Robotic Manipulation",
@@ -848,7 +879,7 @@
         "https://arxiv.org/abs/2611.34538v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 87,
@@ -870,7 +901,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "dddf680c0fc9abedf606ad7513af8a40bca3877207d805bbdab19e27fadcbbb9"
-      }
+      },
+      "summary_zh": "研究考察视觉语言动作策略能否适应执行中的指令变更。DTU-Bench在LIBERO中设置40项任务修订，覆盖7类更新、3个执行阶段，测试13种配置。原任务平均成功率为95.8%，执行中更换操作对象后仅1.6%。诊断显示策略常先完成旧任务，且响应受物理状态影响；释放物体并回撤机械臂可提高部分模型成功率，但可能引发意外物体移动。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "PriorVLA: Prior-Preserving Adaptation for Vision-Language-Action Models",
@@ -898,7 +931,7 @@
         "https://arxiv.org/abs/2605.10925v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 75,
@@ -920,7 +953,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "599730bc4d6c0a45f664cd499decc61dac2d230ecb3ff0742415fbfabcf300ea"
-      }
+      },
+      "summary_zh": "针对全量微调易削弱预训练先验的问题，PriorVLA冻结先验专家，以专家查询提取场景与运动先验，指导适应专家训练，更新参数量为全量微调的25%。摘要报告，其在仿真及真实任务中整体优于对照，分布外和少样本优势最大；LIBERO平均成功率达99.1%，每任务仅10次示范时，真实任务分布内外成功率为48%和32%。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Long-Horizon Planning with Latent World Models via Graph Anchors",
@@ -949,7 +984,7 @@
         "https://arxiv.org/abs/2611.34509v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -968,7 +1003,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "aa38f6609dda6e3f16f5411d0a454de8cf189486eafa5a421c93e10f90c149ab"
-      }
+      },
+      "summary_zh": "研究针对潜在距离在远目标处丧失方向信号、接触时偏重机械臂而忽视物体的问题，提出免训练的Graph Anchors：在训练帧上构建稀疏图，沿最短路径选取附近子目标。记录数据上的排序测试区分了两类失效；在最远400步的目标评测中，三项环境的成功率分别由13%、8%、5%升至85%、87%、71%。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models",
@@ -998,7 +1035,7 @@
         "https://arxiv.org/abs/2610.29866v3"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 62,
@@ -1018,7 +1055,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "1d2b50adf53fc2463f57b3b02b16e0af8711e58857c4bb1e27e1453fc35e05ee"
-      }
+      },
+      "summary_zh": "GeoMem-VLA针对遮挡与多阶段操作中空间信息难以持续保留的问题，以冻结几何教师和示范轨迹监督潜在GeoPlan令牌，通过双记忆库保存与检索历史；推理时无需显式三维重建。摘要报告：LIBERO平均成功率98.9%，RoboTwin 2.0干净及随机化设置分别为91.10%和91.24%，五项真实操作任务为78.0%。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "HoloBrain-0.5 Technical Report",
@@ -1052,7 +1091,7 @@
         "https://arxiv.org/abs/2611.34449v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 83,
@@ -1073,7 +1112,9 @@
         "version": "reading-priority-v1",
         "evaluated_on": "2026-11-27",
         "content_hash": "558ec490345a5e8a0d3104ee1373f627545c42232354ff464cc8a434b0ac1196"
-      }
+      },
+      "summary_zh": "HoloBrain-0.5面向跨机器人形态的操作迁移，统一运动学描述与三维表示，在共享动作空间中分别采用扩散和量化自回归策略。两者以逾万小时、15类形态数据预训练。摘要报告：六种闭环仿真中，离散策略平均成功率为56.77%，高于连续策略的49.71%；后训练后的连续策略在两项真实机器人基准上优于π₀.₅。",
+      "summary_model": "gpt-6-astra"
     },
     {
       "title": "Can Visual World Models See Force?",
@@ -1098,7 +1139,7 @@
         "https://arxiv.org/abs/2611.34422v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 70,
@@ -1149,7 +1190,7 @@
         "https://arxiv.org/abs/2611.34360v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 65,
@@ -1195,7 +1236,7 @@
         "https://arxiv.org/abs/2611.34352v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -1242,7 +1283,7 @@
         "https://arxiv.org/abs/2606.27603v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 72,
@@ -1293,7 +1334,7 @@
         "https://arxiv.org/abs/2611.34302v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 72,
@@ -1342,7 +1383,7 @@
         "https://arxiv.org/abs/2611.34288v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -1390,7 +1431,7 @@
         "https://arxiv.org/abs/2611.34287v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -1436,7 +1477,7 @@
         "https://arxiv.org/abs/2611.34280v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 66,
@@ -1479,7 +1520,7 @@
         "https://arxiv.org/abs/2611.34257v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -1536,7 +1577,7 @@
         "https://arxiv.org/abs/2611.32053v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -1581,7 +1622,7 @@
         "https://arxiv.org/abs/2611.34130v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -1633,7 +1674,7 @@
         "https://arxiv.org/abs/2611.34124v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -1685,7 +1726,7 @@
         "https://arxiv.org/abs/2611.34117v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 72,
@@ -1728,7 +1769,7 @@
         "https://arxiv.org/abs/2611.34046v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 72,
@@ -1781,7 +1822,7 @@
         "https://arxiv.org/abs/2611.34043v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 83,
@@ -1850,7 +1891,7 @@
         "https://arxiv.org/abs/2611.31822v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 85,
@@ -1903,7 +1944,7 @@
         "https://arxiv.org/abs/2609.38984v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 51,
@@ -1951,7 +1992,7 @@
         "https://arxiv.org/abs/2611.33993v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -1999,7 +2040,7 @@
         "https://arxiv.org/abs/2611.33963v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 100,
@@ -2052,7 +2093,7 @@
         "https://arxiv.org/abs/2611.33934v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -2102,7 +2143,7 @@
         "https://arxiv.org/abs/2611.33925v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -2149,7 +2190,7 @@
         "https://arxiv.org/abs/2611.33922v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 65,
@@ -2193,7 +2234,7 @@
         "https://arxiv.org/abs/2611.33917v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -2238,7 +2279,7 @@
         "https://arxiv.org/abs/2611.33880v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -2282,7 +2323,7 @@
         "https://arxiv.org/abs/2611.33828v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -2328,7 +2369,7 @@
         "https://arxiv.org/abs/2611.33816v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 78,
@@ -2373,7 +2414,7 @@
         "https://arxiv.org/abs/2611.33810v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 72,
@@ -2424,7 +2465,7 @@
         "https://arxiv.org/abs/2611.33799v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 76,
@@ -2471,7 +2512,7 @@
         "https://arxiv.org/abs/2611.33797v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -2517,7 +2558,7 @@
         "https://arxiv.org/abs/2611.33794v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -2566,7 +2607,7 @@
         "https://arxiv.org/abs/2611.33769v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 67,
@@ -2616,7 +2657,7 @@
         "https://arxiv.org/abs/2611.33739v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -2666,7 +2707,7 @@
         "https://arxiv.org/abs/2611.33710v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -2721,7 +2762,7 @@
         "https://arxiv.org/abs/2602.23648v3"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 73,
@@ -2776,7 +2817,7 @@
         "https://arxiv.org/abs/2611.33635v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -2823,7 +2864,7 @@
         "https://arxiv.org/abs/2611.33579v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -2867,7 +2908,7 @@
         "https://arxiv.org/abs/2604.09431v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 62,
@@ -2913,7 +2954,7 @@
         "https://arxiv.org/abs/2611.33467v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -2958,7 +2999,7 @@
         "https://arxiv.org/abs/2611.33398v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 65,
@@ -3009,7 +3050,7 @@
         "https://arxiv.org/abs/2611.33390v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -3054,7 +3095,7 @@
         "https://arxiv.org/abs/2611.33352v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 75,
@@ -3100,7 +3141,7 @@
         "https://arxiv.org/abs/2611.33141v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 73,
@@ -3144,7 +3185,7 @@
         "https://arxiv.org/abs/2611.33137v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 76,
@@ -3194,7 +3235,7 @@
         "https://arxiv.org/abs/2611.33010v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 93,
@@ -3251,7 +3292,7 @@
         "https://arxiv.org/abs/2611.32944v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 72,
@@ -3301,7 +3342,7 @@
         "https://arxiv.org/abs/2611.32937v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -3346,7 +3387,7 @@
         "https://arxiv.org/abs/2611.32858v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 76,
@@ -3393,7 +3434,7 @@
         "https://arxiv.org/abs/2611.32786v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 72,
@@ -3441,7 +3482,7 @@
         "https://arxiv.org/abs/2611.32722v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -3484,7 +3525,7 @@
         "https://arxiv.org/abs/2611.32705v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -3535,7 +3576,7 @@
         "https://arxiv.org/abs/2611.32654v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -3585,7 +3626,7 @@
         "https://arxiv.org/abs/2611.32642v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 66,
@@ -3634,7 +3675,7 @@
         "https://arxiv.org/abs/2611.32639v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 93,
@@ -3686,7 +3727,7 @@
         "https://arxiv.org/abs/2609.07838v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 62,
@@ -3738,7 +3779,7 @@
         "https://arxiv.org/abs/2611.32564v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 95,
@@ -3793,7 +3834,7 @@
         "https://arxiv.org/abs/2611.32510v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 62,
@@ -3841,7 +3882,7 @@
         "https://arxiv.org/abs/2611.32483v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 55,
@@ -3898,7 +3939,7 @@
         "https://arxiv.org/abs/2611.32476v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -3945,7 +3986,7 @@
         "https://arxiv.org/abs/2611.32304v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -4003,7 +4044,7 @@
         "https://arxiv.org/abs/2611.32260v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 87,
@@ -4049,7 +4090,7 @@
         "https://arxiv.org/abs/2611.32245v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 93,
@@ -4106,7 +4147,7 @@
         "https://arxiv.org/abs/2611.32241v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -4156,7 +4197,7 @@
         "https://arxiv.org/abs/2611.32233v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 90,
@@ -4206,7 +4247,7 @@
         "https://arxiv.org/abs/2611.33229v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 76,
@@ -4259,7 +4300,7 @@
         "https://arxiv.org/abs/2608.13924v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 62,
@@ -4311,7 +4352,7 @@
         "https://arxiv.org/abs/2611.32216v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -4358,7 +4399,7 @@
         "https://arxiv.org/abs/2611.32206v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 56,
@@ -4406,7 +4447,7 @@
         "https://arxiv.org/abs/2611.32186v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 71,
@@ -4453,7 +4494,7 @@
         "https://arxiv.org/abs/2610.09718v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 56,
@@ -4498,7 +4539,7 @@
         "https://arxiv.org/abs/2611.32152v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -4546,7 +4587,7 @@
         "https://arxiv.org/abs/2610.09696v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 50,
@@ -4584,8 +4625,8 @@
         "Bidan Huang"
       ],
       "topics": [
-        "具身RL",
-        "VTLA"
+        "VTLA",
+        "具身RL"
       ],
       "basis": "论文摘要",
       "id": "arxiv:2611.32101",
@@ -4593,7 +4634,7 @@
         "https://arxiv.org/abs/2611.32101v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 65,
@@ -4604,7 +4645,7 @@
           "时效性": 15
         },
         "reasons": [
-          "覆盖 具身RL、VTLA",
+          "覆盖 VTLA、具身RL",
           "方法描述",
           "任务描述"
         ],
@@ -4643,7 +4684,7 @@
         "https://arxiv.org/abs/2611.32098v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 76,
@@ -4693,7 +4734,7 @@
         "https://arxiv.org/abs/2611.32081v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -4748,7 +4789,7 @@
         "https://arxiv.org/abs/2611.32016v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 87,
@@ -4797,7 +4838,7 @@
         "https://arxiv.org/abs/2603.04932v3"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 50,
@@ -4840,7 +4881,7 @@
         "https://arxiv.org/abs/2611.31954v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -4892,7 +4933,7 @@
         "https://arxiv.org/abs/2609.33412v2"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 46,
@@ -4936,7 +4977,7 @@
         "https://arxiv.org/abs/2611.31925v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 70,
@@ -4982,7 +5023,7 @@
         "https://arxiv.org/abs/2611.31903v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 82,
@@ -5031,7 +5072,7 @@
         "https://arxiv.org/abs/2611.31901v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 83,
@@ -5074,7 +5115,7 @@
         "https://arxiv.org/abs/2611.31843v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -5112,8 +5153,8 @@
         "Ping Wei"
       ],
       "topics": [
-        "WAM",
-        "VTLA"
+        "VTLA",
+        "WAM"
       ],
       "basis": "论文摘要",
       "id": "arxiv:2611.31782",
@@ -5121,7 +5162,7 @@
         "https://arxiv.org/abs/2611.31782v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 87,
@@ -5132,7 +5173,7 @@
           "时效性": 15
         },
         "reasons": [
-          "覆盖 WAM、VTLA",
+          "覆盖 VTLA、WAM",
           "真实机器人实验线索",
           "基准或对照实验线索",
           "方法描述",
@@ -5169,7 +5210,7 @@
         "https://arxiv.org/abs/2611.31740v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 66,
@@ -5210,7 +5251,7 @@
         "https://arxiv.org/abs/2611.31715v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 66,
@@ -5256,7 +5297,7 @@
         "https://arxiv.org/abs/2611.31705v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -5305,7 +5346,7 @@
         "https://arxiv.org/abs/2611.31588v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -5363,7 +5404,7 @@
         "https://arxiv.org/abs/2611.31577v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 100,
@@ -5414,7 +5455,7 @@
         "https://arxiv.org/abs/2611.31535v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 87,
@@ -5461,7 +5502,7 @@
         "https://arxiv.org/abs/2611.31511v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 62,
@@ -5504,7 +5545,7 @@
         "https://arxiv.org/abs/2611.31488v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 77,
@@ -5551,7 +5592,7 @@
         "https://arxiv.org/abs/2611.31452v1"
       ],
       "first_seen_at": "2026-11-26T08:02:03+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 93,
@@ -5610,7 +5651,7 @@
         "https://arxiv.org/abs/2611.31240v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -5656,7 +5697,7 @@
         "https://arxiv.org/abs/2611.31195v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 66,
@@ -5707,7 +5748,7 @@
         "https://arxiv.org/abs/2611.31173v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 88,
@@ -5755,7 +5796,7 @@
         "https://arxiv.org/abs/2611.31129v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 55,
@@ -5799,7 +5840,7 @@
         "https://arxiv.org/abs/2611.31126v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 88,
@@ -5843,7 +5884,7 @@
         "https://arxiv.org/abs/2611.31099v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 55,
@@ -5906,7 +5947,7 @@
         "https://arxiv.org/abs/2611.31002v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 88,
@@ -5957,7 +5998,7 @@
         "https://arxiv.org/abs/2611.30997v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 78,
@@ -6002,7 +6043,7 @@
         "https://arxiv.org/abs/2611.30989v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 71,
@@ -6055,7 +6096,7 @@
         "https://arxiv.org/abs/2611.30963v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 77,
@@ -6101,7 +6142,7 @@
         "https://arxiv.org/abs/2607.09590v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -6146,7 +6187,7 @@
         "https://arxiv.org/abs/2611.30907v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 95,
@@ -6204,7 +6245,7 @@
         "https://arxiv.org/abs/2611.30898v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 83,
@@ -6256,7 +6297,7 @@
         "https://arxiv.org/abs/2611.30836v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -6303,7 +6344,7 @@
         "https://arxiv.org/abs/2611.30784v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -6349,7 +6390,7 @@
         "https://arxiv.org/abs/2611.30765v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -6397,7 +6438,7 @@
         "https://arxiv.org/abs/2610.12368v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -6445,7 +6486,7 @@
         "https://arxiv.org/abs/2611.30637v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 84,
@@ -6494,7 +6535,7 @@
         "https://arxiv.org/abs/2611.30636v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -6545,7 +6586,7 @@
         "https://arxiv.org/abs/2611.30632v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 73,
@@ -6598,7 +6639,7 @@
         "https://arxiv.org/abs/2611.30572v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -6644,7 +6685,7 @@
         "https://arxiv.org/abs/2611.30550v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -6692,7 +6733,7 @@
         "https://arxiv.org/abs/2611.30534v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 75,
@@ -6743,7 +6784,7 @@
         "https://arxiv.org/abs/2611.30516v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -6794,7 +6835,7 @@
         "https://arxiv.org/abs/2611.30490v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -6846,7 +6887,7 @@
         "https://arxiv.org/abs/2611.30477v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -6896,7 +6937,7 @@
         "https://arxiv.org/abs/2611.30389v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 69,
@@ -6946,7 +6987,7 @@
         "https://arxiv.org/abs/2611.30363v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 85,
@@ -6999,7 +7040,7 @@
         "https://arxiv.org/abs/2611.30310v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -7048,7 +7089,7 @@
         "https://arxiv.org/abs/2611.30308v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 74,
@@ -7093,7 +7134,7 @@
         "https://arxiv.org/abs/2610.21522v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 52,
@@ -7141,7 +7182,7 @@
         "https://arxiv.org/abs/2611.30291v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -7224,7 +7265,7 @@
         "https://arxiv.org/abs/2611.30254v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 62,
@@ -7272,7 +7313,7 @@
         "https://arxiv.org/abs/2611.30209v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 69,
@@ -7318,7 +7359,7 @@
         "https://arxiv.org/abs/2611.30204v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -7366,7 +7407,7 @@
         "https://arxiv.org/abs/2611.30195v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 74,
@@ -7415,7 +7456,7 @@
         "https://arxiv.org/abs/2611.30188v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 58,
@@ -7462,7 +7503,7 @@
         "https://arxiv.org/abs/2611.30178v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -7513,7 +7554,7 @@
         "https://arxiv.org/abs/2611.30177v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 63,
@@ -7562,7 +7603,7 @@
         "https://arxiv.org/abs/2610.28164v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -7611,7 +7652,7 @@
         "https://arxiv.org/abs/2611.30145v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -7655,7 +7696,7 @@
         "https://arxiv.org/abs/2611.30133v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -7701,7 +7742,7 @@
         "https://arxiv.org/abs/2606.05737v4"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 62,
@@ -7751,7 +7792,7 @@
         "https://arxiv.org/abs/2611.30111v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 63,
@@ -7793,7 +7834,7 @@
         "https://arxiv.org/abs/2611.30083v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 69,
@@ -7839,7 +7880,7 @@
         "https://arxiv.org/abs/2611.30042v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 42,
@@ -7882,7 +7923,7 @@
         "https://arxiv.org/abs/2611.30041v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -7935,7 +7976,7 @@
         "https://arxiv.org/abs/2611.30024v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -7981,7 +8022,7 @@
         "https://arxiv.org/abs/2610.25600v3"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 73,
@@ -8026,7 +8067,7 @@
         "https://arxiv.org/abs/2610.29088v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 52,
@@ -8071,7 +8112,7 @@
         "https://arxiv.org/abs/2610.19517v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 62,
@@ -8115,7 +8156,7 @@
         "https://arxiv.org/abs/2611.29873v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 85,
@@ -8164,7 +8205,7 @@
         "https://arxiv.org/abs/2611.29868v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 62,
@@ -8205,7 +8246,7 @@
         "https://arxiv.org/abs/2611.29839v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 63,
@@ -8247,7 +8288,7 @@
         "https://arxiv.org/abs/2611.29813v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -8300,7 +8341,7 @@
         "https://arxiv.org/abs/2611.29771v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 62,
@@ -8343,7 +8384,7 @@
         "https://arxiv.org/abs/2611.29646v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 47,
@@ -8384,7 +8425,7 @@
         "https://arxiv.org/abs/2611.29610v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -8430,7 +8471,7 @@
         "https://arxiv.org/abs/2611.29609v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -8479,7 +8520,7 @@
         "https://arxiv.org/abs/2609.22274v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 40,
@@ -8517,7 +8558,7 @@
         "https://arxiv.org/abs/2611.29553v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 54,
@@ -8565,7 +8606,7 @@
         "https://arxiv.org/abs/2610.41857v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 60,
@@ -8609,7 +8650,7 @@
         "https://arxiv.org/abs/2610.05087v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 66,
@@ -8655,7 +8696,7 @@
         "https://arxiv.org/abs/2606.16515v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 55,
@@ -8706,7 +8747,7 @@
         "https://arxiv.org/abs/2611.29501v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -8755,7 +8796,7 @@
         "https://arxiv.org/abs/2611.29483v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -8807,7 +8848,7 @@
         "https://arxiv.org/abs/2602.01166v3"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -8853,7 +8894,7 @@
         "https://arxiv.org/abs/2611.29383v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 69,
@@ -8903,7 +8944,7 @@
         "https://arxiv.org/abs/2611.29377v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -8953,7 +8994,7 @@
         "https://arxiv.org/abs/2611.29339v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -9009,7 +9050,7 @@
         "https://arxiv.org/abs/2611.29338v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -9063,7 +9104,7 @@
         "https://arxiv.org/abs/2611.29279v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -9128,7 +9169,7 @@
         "https://arxiv.org/abs/2611.29277v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -9180,7 +9221,7 @@
         "https://arxiv.org/abs/2610.36535v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 73,
@@ -9244,7 +9285,7 @@
         "https://arxiv.org/abs/2611.29240v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -9288,7 +9329,7 @@
         "https://arxiv.org/abs/2611.29230v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -9338,7 +9379,7 @@
         "https://arxiv.org/abs/2611.29195v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -9386,7 +9427,7 @@
         "https://arxiv.org/abs/2611.29125v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 47,
@@ -9430,7 +9471,7 @@
         "https://arxiv.org/abs/2611.29096v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -9475,7 +9516,7 @@
         "https://arxiv.org/abs/2611.28978v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -9527,7 +9568,7 @@
         "https://arxiv.org/abs/2611.28943v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -9576,7 +9617,7 @@
         "https://arxiv.org/abs/2611.28939v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 62,
@@ -9618,7 +9659,7 @@
         "https://arxiv.org/abs/2611.28873v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -9669,7 +9710,7 @@
         "https://arxiv.org/abs/2611.28871v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -9716,7 +9757,7 @@
         "https://arxiv.org/abs/2611.28867v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -9765,7 +9806,7 @@
         "https://arxiv.org/abs/2611.28839v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -9818,7 +9859,7 @@
         "https://arxiv.org/abs/2611.28803v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -9870,7 +9911,7 @@
         "https://arxiv.org/abs/2611.28752v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -9922,7 +9963,7 @@
         "https://arxiv.org/abs/2611.28732v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 74,
@@ -9973,7 +10014,7 @@
         "https://arxiv.org/abs/2611.28697v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 79,
@@ -10017,7 +10058,7 @@
         "https://arxiv.org/abs/2611.28675v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -10066,7 +10107,7 @@
         "https://arxiv.org/abs/2611.28616v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 78,
@@ -10114,7 +10155,7 @@
         "https://arxiv.org/abs/2611.28585v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 80,
@@ -10160,7 +10201,7 @@
         "https://arxiv.org/abs/2605.29416v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 67,
@@ -10212,7 +10253,7 @@
         "https://arxiv.org/abs/2611.28551v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 73,
@@ -10256,7 +10297,7 @@
         "https://arxiv.org/abs/2611.28509v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 53,
@@ -10300,7 +10341,7 @@
         "https://arxiv.org/abs/2611.28387v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 68,
@@ -10343,7 +10384,7 @@
         "https://arxiv.org/abs/2611.28346v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 69,
@@ -10389,7 +10430,7 @@
         "https://arxiv.org/abs/2611.28319v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 63,
@@ -10433,7 +10474,7 @@
         "https://arxiv.org/abs/2611.28308v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 69,
@@ -10482,7 +10523,7 @@
         "https://arxiv.org/abs/2611.28289v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 75,
@@ -10528,7 +10569,7 @@
         "https://arxiv.org/abs/2602.20231v3"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 61,
@@ -10572,7 +10613,7 @@
         "https://arxiv.org/abs/2504.08604v2"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 74,
@@ -10619,7 +10660,7 @@
         "https://arxiv.org/abs/2611.28256v1"
       ],
       "first_seen_at": "2026-11-24T09:42:01+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 69,
@@ -10706,7 +10747,7 @@
         "https://arxiv.org/abs/2611.27967v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 73,
@@ -10757,7 +10798,7 @@
         "https://arxiv.org/abs/2602.07413v4"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 72,
@@ -10802,7 +10843,7 @@
         "https://arxiv.org/abs/2611.27939v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 64,
@@ -10854,7 +10895,7 @@
         "https://arxiv.org/abs/2608.04196v3"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 68,
@@ -10909,7 +10950,7 @@
         "https://arxiv.org/abs/2611.27645v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 69,
@@ -10953,7 +10994,7 @@
         "https://arxiv.org/abs/2611.27639v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 73,
@@ -10999,7 +11040,7 @@
         "https://arxiv.org/abs/2609.36774v2"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 73,
@@ -11050,7 +11091,7 @@
         "https://arxiv.org/abs/2610.39232v3"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 53,
@@ -11097,7 +11138,7 @@
         "https://arxiv.org/abs/2611.27513v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 79,
@@ -11147,7 +11188,7 @@
         "https://arxiv.org/abs/2611.27446v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 85,
@@ -11200,7 +11241,7 @@
         "https://arxiv.org/abs/2611.27401v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 79,
@@ -11250,7 +11291,7 @@
         "https://arxiv.org/abs/2611.27372v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 63,
@@ -11292,7 +11333,7 @@
         "https://arxiv.org/abs/2611.27344v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 57,
@@ -11356,7 +11397,7 @@
         "https://arxiv.org/abs/2610.32965v2"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 57,
@@ -11410,7 +11451,7 @@
         "https://arxiv.org/abs/2609.15570v4"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 67,
@@ -11465,7 +11506,7 @@
         "https://arxiv.org/abs/2604.09244v3"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 46,
@@ -11510,7 +11551,7 @@
         "https://arxiv.org/abs/2611.27226v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 58,
@@ -11562,7 +11603,7 @@
         "https://arxiv.org/abs/2611.27187v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 80,
@@ -11613,7 +11654,7 @@
         "https://arxiv.org/abs/2611.27182v2"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 85,
@@ -11665,7 +11706,7 @@
         "https://arxiv.org/abs/2611.27171v1"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 70,
@@ -11818,7 +11859,7 @@
         "https://arxiv.org/abs/2611.27047v2"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 84,
@@ -11896,7 +11937,7 @@
         "https://arxiv.org/abs/2611.27042v2"
       ],
       "first_seen_at": "2026-11-23T07:21:16+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 63,
@@ -12783,7 +12824,7 @@
         "https://arxiv.org/abs/2611.26405v3"
       ],
       "first_seen_at": "2026-11-20T06:58:47+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 90,
@@ -12927,7 +12968,7 @@
         "https://arxiv.org/abs/2611.26293v2"
       ],
       "first_seen_at": "2026-11-20T06:58:47+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 63,
@@ -13387,7 +13428,7 @@
         "https://arxiv.org/abs/2611.25958v2"
       ],
       "first_seen_at": "2026-11-20T06:58:47+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 62,
@@ -13631,7 +13672,7 @@
         "https://arxiv.org/abs/2611.25683v2"
       ],
       "first_seen_at": "2026-11-20T06:58:47+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 87,
@@ -13869,7 +13910,7 @@
         "https://arxiv.org/abs/2611.25595v3"
       ],
       "first_seen_at": "2026-11-20T06:58:47+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 69,
@@ -14909,7 +14950,7 @@
         "https://arxiv.org/abs/2611.25105v2"
       ],
       "first_seen_at": "2026-11-20T06:58:47+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 80,
@@ -18283,7 +18324,7 @@
         "https://arxiv.org/abs/2611.22543v2"
       ],
       "first_seen_at": "2026-11-18T07:08:55+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 69,
@@ -18712,7 +18753,7 @@
         "https://arxiv.org/abs/2611.22356v2"
       ],
       "first_seen_at": "2026-11-18T07:08:55+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 48,
@@ -19376,7 +19417,7 @@
         "https://arxiv.org/abs/2611.21258v5"
       ],
       "first_seen_at": "2026-11-17T07:43:53+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 75,
@@ -19578,7 +19619,7 @@
         "https://arxiv.org/abs/2611.21057v3"
       ],
       "first_seen_at": "2026-11-17T07:43:53+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 68,
@@ -22182,7 +22223,7 @@
         "https://arxiv.org/abs/2611.18891v2"
       ],
       "first_seen_at": "2026-11-17T07:43:53+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 53,
@@ -22319,7 +22360,7 @@
         "https://arxiv.org/abs/2611.18562v2"
       ],
       "first_seen_at": "2026-11-16T06:09:05+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 72,
@@ -23244,7 +23285,7 @@
         "https://arxiv.org/abs/2611.16589v2"
       ],
       "first_seen_at": "2026-11-13T06:24:57+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 70,
@@ -23647,7 +23688,7 @@
         "https://arxiv.org/abs/2611.16246v4"
       ],
       "first_seen_at": "2026-11-13T06:24:57+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 70,
@@ -24286,7 +24327,7 @@
         "https://arxiv.org/abs/2611.15215v2"
       ],
       "first_seen_at": "2026-11-13T06:24:57+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 59,
@@ -29996,7 +30037,7 @@
         "https://arxiv.org/abs/2611.09892v4"
       ],
       "first_seen_at": "2026-11-09T06:00:22+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 76,
@@ -30778,7 +30819,7 @@
         "https://arxiv.org/abs/2610.30320v3"
       ],
       "first_seen_at": "2026-11-09T06:00:22+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 80,
@@ -32558,7 +32599,7 @@
         "https://arxiv.org/abs/2611.08156v2"
       ],
       "first_seen_at": "2026-11-08T07:02:13+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-23T07:21:16+00:00",
       "rating": {
         "score": 65,
@@ -36752,7 +36793,7 @@
         "https://arxiv.org/abs/2611.04870v2"
       ],
       "first_seen_at": "2026-11-08T07:02:13+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 64,
@@ -37732,7 +37773,7 @@
         "https://arxiv.org/abs/2611.04241v3"
       ],
       "first_seen_at": "2026-11-08T07:02:13+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-26T08:02:03+00:00",
       "rating": {
         "score": 54,
@@ -38127,7 +38168,7 @@
         "https://arxiv.org/abs/2611.03850v2"
       ],
       "first_seen_at": "2026-11-08T07:02:13+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 55,
@@ -38232,7 +38273,7 @@
         "https://arxiv.org/abs/2603.19233v7"
       ],
       "first_seen_at": "2026-11-08T07:02:13+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 51,
@@ -39306,7 +39347,7 @@
         "https://arxiv.org/abs/2611.02947v2"
       ],
       "first_seen_at": "2026-11-08T07:02:13+00:00",
-      "last_seen_at": "2026-11-26T08:02:03+00:00",
+      "last_seen_at": "2026-11-27T05:29:11+00:00",
       "content_changed_at": "2026-11-24T09:42:01+00:00",
       "rating": {
         "score": 60,
@@ -40777,11 +40818,10 @@
       }
     }
   ],
-  "summary_updated_at": "2026-11-27T04:43:23+00:00",
   "daily_editions": [
     {
       "date": "2026-11-27",
-      "generated_at": "2026-11-27T04:43:23+00:00",
+      "generated_at": "2026-11-27T05:29:11+00:00",
       "items": [
         {
           "id": "arxiv:2611.33963",
