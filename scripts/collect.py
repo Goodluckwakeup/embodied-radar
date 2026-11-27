@@ -376,6 +376,46 @@ def prepare_daily(data, stamp, config, no_ai=False):
     return status
 
 
+def collect_sources(existing, config, stamp, no_search=False):
+    """Collect arXiv first, then fill gaps from institutions before ranking."""
+    started = date(stamp)
+    cutoff = started - dt.timedelta(days=config['lookback_days'])
+    supplement_cutoff = started - dt.timedelta(days=config.get('institution_lookback_days', 30))
+    rows, statuses, found = existing, [], 0
+    try:
+        primary, complete = arxiv(config, cutoff)
+        before = len(rows)
+        rows = merge(rows, primary, stamp)
+        found += len(primary)
+        statuses.append(dict(source='arXiv', phase='primary', state='ok' if complete else 'partial',
+                             count=len(primary), new_count=len(rows)-before,
+                             detail='第一步：arXiv 主检索；' + ('窗口扫描完成' if complete else '达到分页上限，请增加 arxiv_max_pages')))
+    except Exception as error:
+        statuses.append(dict(source='arXiv', phase='primary', state='error', detail=error_name(error)))
+    # A supplementary index adds missing papers or source provenance, never a second copy.
+    for kind, specs in (('papers', config.get('official_pages', [])), ('feed', config.get('feeds', []))):
+        for spec in specs:
+            try:
+                additions = (official_papers(spec, supplement_cutoff, request, article)
+                             if kind == 'papers' else feed(spec, supplement_cutoff))
+                before = len(rows)
+                rows = merge(rows, additions, stamp)
+                added = len(rows) - before
+                found += len(additions)
+                statuses.append(dict(source=spec['name'], phase='supplement', state='ok',
+                                     count=len(additions), new_count=added, matched_count=len(additions)-added,
+                                     url=spec['url'], detail=f'第二步：机构补充（近 {config.get("institution_lookback_days", 30)} 天）；新增 {added} 条，已收录关联 {len(additions)-added} 条'))
+            except Exception as error:
+                statuses.append(dict(source=spec['name'], phase='supplement', state='error',
+                                     url=spec['url'], detail=error_name(error)))
+    additions, search_statuses = (([], [dict(source='全网搜索', state='skipped', detail='本轮未启用')])
+                                  if no_search else search(config))
+    rows = merge(rows, additions, stamp)
+    found += len(additions)
+    statuses.extend(search_statuses)
+    return rows, statuses, found
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--no-ai', action='store_true', help='禁止本轮调用摘要 API')
@@ -399,34 +439,7 @@ def main():
         save_data(old)
         print('摘要更新完成：' + status['state'])
         return
-    cutoff = dt.datetime.now(UTC) - dt.timedelta(days=config['lookback_days'])
-    candidates, statuses = [], []
-    try:
-        rows, complete = arxiv(config, cutoff)
-        candidates.extend(rows)
-        statuses.append(dict(source='arXiv', state='ok' if complete else 'partial', count=len(rows),
-                             detail='窗口扫描完成' if complete else '达到分页上限，请增加 arxiv_max_pages'))
-    except Exception as error:
-        statuses.append(dict(source='arXiv', state='error', detail=error_name(error)))
-    for spec in config['feeds']:
-        try:
-            rows = feed(spec, cutoff)
-            candidates.extend(rows)
-            statuses.append(dict(source=spec['name'], state='ok', count=len(rows), url=spec['url']))
-        except Exception as error:
-            statuses.append(dict(source=spec['name'], state='error', url=spec['url'], detail=error_name(error)))
-    for spec in config.get('official_pages', []):
-        try:
-            rows = official_papers(spec, cutoff, request, article)
-            candidates.extend(rows)
-            statuses.append(dict(source=spec['name'], state='ok', count=len(rows), url=spec['url'],
-                                 detail='官方论文页收录；不据此推断作者所属'))
-        except Exception as error:
-            statuses.append(dict(source=spec['name'], state='error', url=spec['url'], detail=error_name(error)))
-    rows, search_statuses = ([], [dict(source='全网搜索', state='skipped', detail='本轮未启用')]) if args.no_search else search(config)
-    candidates.extend(rows)
-    statuses.extend(search_statuses)
-    rows = merge(old['articles'], candidates, stamp)
+    rows, statuses, found = collect_sources(old['articles'], config, stamp, args.no_search)
     apply_curated(rows)
     collection = list(statuses)
     state = 'ok' if all(s['state'] == 'ok' for s in collection) else 'partial'
@@ -440,7 +453,7 @@ def main():
     prepare_daily(data, stamp, config, args.no_ai)
     # Old records remain intact when any source fails.
     save_data(data)
-    print(f'采集状态 {state}，候选 {len(candidates)}，历史文章 {len(rows)}')
+    print(f'采集状态 {state}，候选 {found}，历史文章 {len(rows)}')
 
 
 if __name__ == '__main__':
